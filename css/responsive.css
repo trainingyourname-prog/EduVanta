@@ -1,0 +1,93 @@
+/* ===========================
+   Mobile Responsive
+=========================== */
+
+@media (max-width:768px){
+/* Hero */
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:50px 20px;
+    }
+
+    .hero-text h1{
+        font-size:48px;
+    }
+
+    .hero-text p{
+        font-size:20px;
+    }
+
+    .hero-image{
+        margin-top:40px;
+    }
+
+    .hero-image img{
+        width:250px;
+    }
+
+    /* Showcase */
+
+    .showcase{
+        flex-direction:column;
+        text-align:center;
+        padding:50px 20px;
+    }
+
+    .showcase-image img{
+        width:260px;
+    }
+
+    .showcase-text h2{
+        font-size:36px;
+    }
+
+    .showcase-text li{
+        font-size:18px;
+    }
+
+    /* Features */
+
+    .features{
+        padding:60px 20px;
+    }
+
+    .feature-container{
+        grid-template-columns:1fr;
+    }
+
+    /* Statistics */
+
+    .stats{
+        grid-template-columns:1fr;
+        padding:60px 20px;
+    }
+
+    /* Download */
+
+    .download-page{
+        padding:60px 20px;
+    }
+
+    .download-card{
+        padding:25px;
+    }
+
+    /* About */
+
+    .about-hero h1{
+        font-size:38px;
+    }
+
+    .about-card{
+        margin:20px;
+    }
+
+    .floating-btn{
+        right:15px;
+        bottom:15px;
+        padding:14px 22px;
+    }
+
+}
