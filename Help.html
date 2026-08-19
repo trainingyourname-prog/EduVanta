@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EduVanta Help Center - Quiz file creation support">
+  <title>EduVanta — Help &amp; Support</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/Help.css">
+</head>
+<body class="help-page">
+<header>
+  <div class="header-inner">
+    <h2><a href="index.html" aria-label="EduVanta Home">EduVanta</a></h2>
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-controls="mainNav" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="screenshots.html">Screenshots</a>
+      <a href="download.html">Download</a>
+      <a href="about.html">About</a>
+      <a class="active" href="Help.html">Help &amp; Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="help-hero">
+    <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+    <div class="hero-content">
+      <span class="hero-badge">✦ EDUVANTA SUPPORT DESK</span>
+      <p class="hero-kicker">STUDENT HELP CENTER</p>
+      <h1>আপনার Quiz File তৈরিতে<br><span>EduVanta পাশে আছে</span></h1>
+      <p class="hero-copy">আপনার প্রশ্নের PDF বা ছবি পাঠান। প্রয়োজন অনুযায়ী JSON, XLS বা XLSX format-এ question file তৈরির জন্য support request পাঠাতে পারবেন।</p>
+      <div class="hero-buttons">
+        <a href="#request" class="primary-btn">📤 ফাইল পাঠান</a>
+        <a href="#how-it-works" class="secondary-btn">কীভাবে কাজ করে?</a>
+      </div>
+      <div class="hero-note"><span>✓ PDF সর্বোচ্চ 3 MB</span><span>✓ সর্বোচ্চ 5টি Photo</span><span>✓ Problem / Instruction ঐচ্ছিক</span></div>
+    </div>
+  </section>
+
+  <section class="support-strip" id="how-it-works">
+    <div class="strip-title"><span>01</span><div><small>HOW IT WORKS</small><h2>সহজ ৪টি ধাপে Request পাঠান</h2></div></div>
+    <div class="step-grid">
+      <article class="step-card"><span>01</span><div class="step-icon">📎</div><h3>প্রশ্ন পাঠান</h3><p>আপনার PDF অথবা প্রয়োজনীয় Photo নির্বাচন করুন।</p></article>
+      <article class="step-card"><span>02</span><div class="step-icon">🧾</div><h3>Format বাছুন</h3><p>JSON, XLS অথবা XLSX—যেটি প্রয়োজন সেটি নির্বাচন করুন।</p></article>
+      <article class="step-card"><span>03</span><div class="step-icon">✍️</div><h3>Instruction দিন</h3><p>Problem বা Instruction থাকলে লিখুন; না লিখলেও Request পাঠানো যাবে।</p></article>
+      <article class="step-card"><span>04</span><div class="step-icon">📩</div><h3>Request Submit</h3><p>তথ্য যাচাই করে Submit করুন এবং প্রয়োজন হলে যোগাযোগ করুন।</p></article>
+    </div>
+  </section>
+
+  <section class="request-section" id="request">
+    <div class="section-heading">
+      <span>02 • SUPPORT REQUEST</span>
+      <h2>ফাইল তৈরির অনুরোধ</h2>
+      <p>যে তথ্যগুলো প্রয়োজন সেগুলো পূরণ করুন। <b>Problem / Instruction সম্পূর্ণ ঐচ্ছিক।</b></p>
+    </div>
+
+    <form id="helpForm" class="help-form">
+      <div class="form-ribbon">EDUVANTA • REQUEST FORM</div>
+      <div class="form-grid">
+        <div class="field"><label for="studentName">Student Name <b>*</b></label><input id="studentName" name="studentName" type="text" placeholder="আপনার নাম লিখুন" required maxlength="80"></div>
+        <div class="field"><label for="whatsapp">WhatsApp Number <b>*</b></label><input id="whatsapp" name="whatsapp" type="tel" inputmode="tel" placeholder="যেমন: 9876543210" required maxlength="20"><small>দেশের কোডসহ দিলে আরও ভালো, যেমন +91XXXXXXXXXX</small></div>
+        <div class="field"><label for="email">Email <span class="optional-label">(ঐচ্ছিক)</span></label><input id="email" name="email" type="email" placeholder="yourname@example.com" maxlength="120"></div>
+        <div class="field"><label for="subject">Subject / Topic <b>*</b></label><select id="subject" name="subject" required><option value="" selected disabled>একটি Subject / Topic নির্বাচন করুন</option><option value="বাংলা">বাংলা</option><option value="ইংরেজি">ইংরেজি</option><option value="ইতিহাস">ইতিহাস</option><option value="ভূগোল">ভূগোল</option><option value="জীববিজ্ঞান">জীববিজ্ঞান</option><option value="কম্পিউটার">কম্পিউটার</option><option value="অন্যান্য">অন্যান্য</option></select><input id="otherSubject" class="other-subject" type="text" placeholder="আপনার Subject / Topic লিখুন" maxlength="120" aria-label="Other Subject / Topic"></div>
+      </div>
+
+      <div class="field"><label>কোন ফাইলে চান? <b>*</b></label><div class="format-grid">
+        <label class="format-option"><input type="radio" name="format" value="JSON" required><span><strong>JSON</strong><small>Quiz App</small></span></label>
+        <label class="format-option"><input type="radio" name="format" value="XLS"><span><strong>XLS</strong><small>Excel</small></span></label>
+        <label class="format-option"><input type="radio" name="format" value="XLSX"><span><strong>XLSX</strong><small>Modern Excel</small></span></label>
+      </div><small class="format-note">একবারে একটি output format নির্বাচন করুন।</small></div>
+
+      <div class="field"><label for="problem">Problem / Instruction <span class="optional-label">(ঐচ্ছিক)</span></label><textarea id="problem" name="problem" rows="6" maxlength="2000" placeholder="যেমন: PDF-এর সব MCQ JSON format-এ চাই। ৪টি option ও correct answer রাখতে হবে।"></textarea><div class="counter"><span id="problemCount">0</span>/2000</div></div>
+
+      <div class="field"><label for="sourceFile">Question File / Photo / PDF <b>*</b></label><div class="upload-box" id="uploadBox">
+        <input id="sourceFile" name="sourceFile" type="file" accept=".pdf,.jpg,.jpeg,.png,.webp" multiple>
+        <div class="upload-icon">📤</div><strong>ফাইল নির্বাচন করতে ক্লিক করুন</strong><span>PDF: সর্বোচ্চ 3 MB • Photo: সর্বোচ্চ 5টি</span><p id="fileName">কোনো ফাইল নির্বাচন করা হয়নি</p><small class="upload-note">একটি PDF অথবা সর্বোচ্চ ৫টি JPG, JPEG, PNG, WEBP Photo নির্বাচন করুন।</small>
+      </div></div>
+
+      <label class="consent"><input type="checkbox" id="consent" required><span>আমি নিশ্চিত করছি যে পাঠানো ফাইল ও যোগাযোগের তথ্য সঠিক এবং এই ফাইল পাঠানোর অনুমতি আমার আছে।</span></label>
+      <button type="submit" class="submit-btn" id="submitBtn"><span>📤 Request Submit করুন</span></button>
+      <div id="formStatus" class="form-status" role="status"></div>
+    </form>
+  </section>
+
+  <section class="support-note-section">
+    <div class="note-card"><span>03</span><div><small>BEFORE YOU SUBMIT</small><h2>এক নজরে মনে রাখুন</h2><ul><li>PDF হলে সর্বোচ্চ <strong>3 MB</strong>।</li><li>Photo হলে সর্বোচ্চ <strong>5টি</strong> একসঙ্গে।</li><li><strong>Problem / Instruction</strong> লিখতেই হবে—এমন নয়।</li><li>JSON, XLS অথবা XLSX-এর মধ্যে একটি format বাছুন।</li></ul></div></div>
+  </section>
+
+  <section class="contact-section">
+    <div><span class="section-label">04 • DIRECT SUPPORT</span><h2>আরও সাহায্য প্রয়োজন?</h2><p>Request পাঠানোর পর প্রয়োজন হলে WhatsApp বা Email-এর মাধ্যমে যোগাযোগ করতে পারেন।</p></div>
+    <div class="contact-buttons"><a class="contact whatsapp" id="whatsappLink" href="#" target="_blank" rel="noopener">💬 WhatsApp</a><a class="contact email" id="emailLink" href="#">✉️ Email</a></div>
+  </section>
+</main>
+
+<footer><p>© <span id="year"></span> EduVanta • Help &amp; Support</p></footer>
+<script src="js/menu.js"></script>
+<script src="js/Help.js"></script>
+</body>
+</html>
