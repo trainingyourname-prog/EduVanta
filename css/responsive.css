@@ -1,0 +1,288 @@
+/* ===========================
+   Mobile Responsive
+=========================== */
+
+@media (max-width:768px){
+/* Hero */
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:50px 20px;
+    }
+
+    .hero-text h1{
+        font-size:48px;
+    }
+
+    .hero-text p{
+        font-size:20px;
+    }
+
+    .hero-image{
+        width:100%;
+        margin-top:40px;
+    }
+
+    .home-banner-slider{
+        width:min(94vw,620px);
+        margin:8px auto 28px;
+    }
+
+    .home-banner-viewport{
+        border-radius:20px;
+        padding:5px;
+    }
+
+    .home-banner-slide{
+        inset:5px;
+        width:calc(100% - 10px);
+        height:calc(100% - 10px);
+        border-radius:15px;
+    }
+
+    .home-banner-viewport::after{
+        inset:5px;
+        border-radius:15px;
+    }
+
+    .hero-logo-wrap img{
+        width:250px;
+    }
+
+    /* Showcase */
+
+    .showcase{
+        flex-direction:column;
+        text-align:center;
+        padding:50px 20px;
+    }
+
+    .showcase-image img{
+        width:260px;
+    }
+
+    .showcase-text h2{
+        font-size:36px;
+    }
+
+    .showcase-text li{
+        font-size:18px;
+    }
+
+    /* Features */
+
+    .features{
+        padding:60px 20px;
+    }
+
+    .feature-container{
+        grid-template-columns:1fr;
+    }
+
+    /* Statistics */
+
+    .stats{
+        grid-template-columns:1fr;
+        padding:60px 20px;
+    }
+
+    /* Download */
+
+    .download-page{
+        padding:60px 20px;
+    }
+
+    .download-card{
+        padding:25px;
+    }
+
+    /* About */
+
+    .about-hero h1{
+        font-size:38px;
+    }
+
+    .about-card{
+        margin:20px;
+    }
+
+    .floating-btn{
+        right:15px;
+        bottom:15px;
+        padding:14px 22px;
+    }
+
+}
+
+/* ===== Classic Premium Home — Mobile Finish ===== */
+@media (max-width:768px){
+    .premium-hero{
+        padding:24px 12px 65px;
+    }
+    .hero-featured-wrap{
+        width:100%;
+        margin-bottom:27px;
+    }
+    .hero-featured-heading{
+        font-size:9px;
+        letter-spacing:2px;
+        gap:8px;
+    }
+    .ornament-line{width:35px;}
+    .premium-banner{width:100%;}
+    .premium-banner .home-banner-viewport{
+        height:58vh;
+        min-height:310px;
+        max-height:590px;
+        padding:6px;
+        border-radius:23px;
+    }
+    .premium-banner .home-banner-slide{
+        inset:6px;
+        width:calc(100% - 12px);
+        height:calc(100% - 12px);
+        border-radius:17px;
+    }
+    .premium-banner .home-banner-viewport::before,
+    .banner-shine{
+        inset:6px;
+        border-radius:17px;
+    }
+    .hero-kicker{
+        font-size:8px;
+        letter-spacing:1.7px;
+        padding:6px 12px;
+    }
+    .hero-content-premium h1{
+        font-size:54px;
+        letter-spacing:-1.5px;
+    }
+    .hero-title-line span{width:42px;}
+    .hero-content-premium .hero-tagline{
+        font-size:20px;
+        line-height:1.45;
+    }
+    .hero-content-premium .hero-description{
+        font-size:15px;
+        line-height:1.7;
+        padding:0 8px;
+    }
+    .hero-content-premium .hero-app-details{
+        gap:9px;
+        margin-bottom:25px;
+    }
+    .hero-content-premium .hero-app-details span{
+        padding:9px 12px;
+        font-size:12px;
+    }
+    .hero-content-premium .download-btn{
+        min-width:0;
+        width:min(92vw,360px);
+        padding:15px 20px;
+        font-size:18px;
+    }
+    .hero-content-premium .hero-image{margin-top:31px;}
+    .hero-content-premium .hero-logo-wrap img{width:150px;}
+    .ring-one{inset:-10px;}
+    .ring-two{inset:-20px;}
+}
+
+@media (max-width:380px){
+    .premium-banner .home-banner-viewport{
+        height:54vh;
+        min-height:285px;
+    }
+    .hero-content-premium h1{font-size:47px;}
+    .hero-content-premium .hero-tagline{font-size:18px;}
+    .hero-content-premium .hero-app-details span{font-size:11px;padding:8px 10px;}
+}
+
+/* =========================================================
+   HOME BANNER — FINAL AUTO-FIT FIX
+   The banner frame follows the real image ratio on every slide.
+   Also forces the featured banner and hero content to stay stacked.
+   ========================================================= */
+body.home-page .premium-hero{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:center !important;
+    justify-content:flex-start !important;
+    text-align:center !important;
+}
+
+body.home-page .hero-featured-wrap,
+body.home-page .hero-content-premium{
+    position:relative;
+    width:min(1100px,96vw);
+    max-width:1100px;
+    flex:none;
+    clear:both;
+}
+
+body.home-page .hero-content-premium{
+    margin:0 auto;
+    z-index:1;
+}
+
+body.home-page .premium-banner{
+    width:min(1050px,96vw);
+}
+
+/* JS writes the exact image ratio into --banner-ratio. */
+body.home-page .premium-banner .home-banner-viewport{
+    height:auto !important;
+    min-height:0 !important;
+    max-height:none !important;
+    aspect-ratio:var(--banner-ratio, 2 / 1) !important;
+    transition:aspect-ratio .35s ease;
+}
+
+body.home-page .premium-banner .home-banner-slide{
+    object-fit:contain !important;
+    object-position:center;
+    background:#090b13;
+}
+
+/* Small classic website-style dots — no pill-shaped active dot. */
+body.home-page .premium-banner .home-banner-dots{
+    gap:8px;
+    min-height:18px;
+    padding-top:12px;
+}
+
+body.home-page .premium-banner .home-banner-dot,
+body.home-page .premium-banner .home-banner-dot.active{
+    width:7px !important;
+    height:7px !important;
+    min-width:7px;
+    padding:0 !important;
+    border-radius:50%;
+    background:rgba(255,255,255,.38);
+    box-shadow:none;
+    transform:none;
+}
+
+body.home-page .premium-banner .home-banner-dot.active{
+    width:9px !important;
+    height:9px !important;
+    min-width:9px;
+    background:#e8c66a;
+    box-shadow:0 0 10px rgba(232,198,106,.65);
+}
+
+body.home-page .premium-banner .home-banner-dot:hover{
+    transform:scale(1.25);
+}
+
+@media (max-width:768px){
+    body.home-page .premium-banner .home-banner-viewport{
+        aspect-ratio:var(--banner-ratio, 2 / 1) !important;
+    }
+
+    body.home-page .hero-featured-wrap,
+    body.home-page .hero-content-premium{
+        width:100%;
+        max-width:100%;
+    }
+}
